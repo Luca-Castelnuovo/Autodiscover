@@ -3,22 +3,12 @@
 require_once __DIR__.'/../vendor/autoload.php';
 
 use CQ\Config\Config;
-use CQ\DB\DB;
 use CQ\Helpers\App;
 use CQ\Routing\Router;
 
-session_start();
-
 // Config
 $config = new Config(__DIR__);
-$config->attach('analytics');
 $config->attach('app');
-$config->attach('auth'); // auth.castelnuovo.xyz
-$config->attach('cache');
-$config->attach('cors');
-$config->attach('database');
-$config->attach('ratelimit');
-$config->attach('roles');
 
 // Debug Helper
 if (App::debug()) {
@@ -29,14 +19,10 @@ if (App::debug()) {
     $whoops->register();
 }
 
-// Database
-$database = new DB();
-$database->connect();
-
 // Router
 $router = new Router([
-    '404' => '/error/404',
-    '500' => '/error/500',
+    '404' => 'https://mail.castelnuovo.xyz',
+    '500' => 'https://mail.castelnuovo.xyz',
 ]);
 
 require __DIR__.'/../routes/web.php';
