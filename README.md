@@ -6,7 +6,7 @@
 <a href="https://packagist.org/packages/cubequence/cubequence"><img src="https://poser.pugx.org/cubequence/cubequence/license.svg" alt="License"></a>
 </p>
 
-# CubeQuence
+# Autodiscover
 
 Ultra-Light custom php framework.
 
@@ -14,16 +14,17 @@ Ultra-Light custom php framework.
 
 For development
 
-1. `composer create-project --prefer-dist cubequence/cubequence hello-world`
-2. Edit `.env`
-3. `php cubequence app:key`
-4. `php cubequence db:migrate`
-5. `php cubequence db:seed`
-6. Start development server `php -S localhost:8080 -t public`
+1. `git clone git@github.com:Luca-Castelnuovo/autodiscover.git`
+2. `composer install`
+3. Edit `.env`
+4. `php cubequence app:key`
+5. `php cubequence db:migrate`
+6. `php cubequence db:seed`
+7. Start development server `php -S localhost:8080 -t public`
 
 For deployment
 
-1. `git clone https://github.com/CubeQuence/CubeQuence`
+1. `git clone git@github.com:Luca-Castelnuovo/autodiscover.git`
 2. `composer install --optimize-autoloader --no-dev`
 3. Edit `.env`
 4. `php cubequence app:key`
@@ -31,7 +32,7 @@ For deployment
 
 ## Security Vulnerabilities
 
-Please review [our security policy](https://github.com/CubeQuence/CubeQuence/security/policy) on how to report security vulnerabilities.
+Please review [our security policy](https://github.com/Luca-Castelnuovo/autodiscover/security/policy) on how to report security vulnerabilities.
 
 ## License
 
