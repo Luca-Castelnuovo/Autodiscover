@@ -14,23 +14,4 @@ $cli = new CLI();
 $cli->command('app:key', [new App\Commands\App(), 'key'])
     ->descriptions('Generate app key used for encryption');
 
-$cli->command('db:migrate [--fresh]', [new App\Commands\DB(), 'migrate'])
-    ->descriptions('Migrate database tables', [
-        '--fresh' => 'Reset DB before running migrations'
-    ]);
-
-$cli->command('db:seed', [new App\Commands\DB(), 'seed'])
-    ->descriptions('Seed database tables');
-
-$cli->command('make:migration [name]', [new App\Commands\Make(), 'migration'])
-    ->descriptions('Create database migration')
-    ->descriptions('Create database seeder', [
-        'name' => 'Name of migration e.g. (CreateUsersTable)'
-    ]);
-
-$cli->command('make:seed name', [new App\Commands\Make(), 'seed'])
-    ->descriptions('Create database seeder', [
-        'name' => 'Name of seeder e.g. (UsersSeeder)'
-    ]);
-
 $cli->run();
