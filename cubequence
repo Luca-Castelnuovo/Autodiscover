@@ -11,7 +11,7 @@ $config->attach('app');
 
 $cli = new CLI();
 
-$cli->command('app:key', [new App\Commands\App(), 'key'])
+$cli->command('app:key', [new CQ\CLI\App(), 'key'])
     ->descriptions('Generate app key used for encryption');
 
 $cli->run();
